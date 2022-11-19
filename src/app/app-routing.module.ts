@@ -7,14 +7,23 @@ import { NotPageFoundComponent } from './pages/notpagefound/notpagefound.compone
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { GraphOneComponent } from './pages/graph-one/graph-one.component';
+import { PagesComponent } from './pages/pages.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'progress', component: ProgressComponent },
-  { path: 'graph-one', component: GraphOneComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  {
+    path: '',
+    component: PagesComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'progress', component: ProgressComponent },      
+      { path: 'graph-one', component: GraphOneComponent },
+      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    ]
+  },
+
+  { path: 'register', component: RegisterComponent },  
+  { path: 'login', component: LoginComponent },  
+  
   { path: '**', component: NotPageFoundComponent }
 ]
 

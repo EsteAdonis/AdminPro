@@ -12,6 +12,7 @@ import { NotPageFoundComponent } from './pages/notpagefound/notpagefound.compone
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { GraphOneComponent } from './pages/graph-one/graph-one.component';
+import { PagesComponent } from './pages/pages.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { GraphOneComponent } from './pages/graph-one/graph-one.component';
     NotPageFoundComponent,
     LoginComponent,
     RegisterComponent,
+    PagesComponent,
   ],
   imports: [
     BrowserModule,
