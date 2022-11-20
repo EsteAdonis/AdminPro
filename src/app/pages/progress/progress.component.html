@@ -1,1 +1,50 @@
-<p>progress works!</p>
+<div class="row">
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Stripped Progress bar</h4>
+          <div class="progress mt-t-20">
+          <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" 
+                style="height: 5px;" 
+                [style.width]="getProgressOne"
+                role="progressbar">
+          </div>
+          </div>
+
+          <div class="progress mt-4">
+          <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" 
+                style="height: 5px;" 
+                [style.width]="getProgressTwo"
+                role="progressbar">
+          </div>
+          </div>           
+        </div>
+    </div>
+</div>
+</div>     
+
+<!-- Syntax  son <- father (father is sending the value to the son)  -->
+<!-- @Input() [progress]   is the son and   ="15"  is the father  -->
+<div class="row">
+<div class="col-6">
+  <div class="card">
+    <div class="card-body">
+      <app-incrementer [progress]="progressOne"
+                       (updatedValue)="progressOne = $event"
+      ></app-incrementer>
+    </div>
+  </div>
+</div>
+
+<div class="col-6">
+  <div class="card">
+    <div class="card-body">
+      <app-incrementer [btnClass]="'btn-info'"
+                       [progress]="progressTwo"
+                       (updatedValue)="progressTwo = $event"
+      ></app-incrementer>
+    </div>
+  </div>
+</div>
+</div>
+

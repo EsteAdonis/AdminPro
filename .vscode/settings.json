@@ -2,4 +2,7 @@
   "editor.mouseWheelZoom": true,
   "window.zoomLevel": 1.5,
   "editor.tabSize": 2,
+  "htmlhint.options": {
+    "attr-lowercase": false
+  },
 }
