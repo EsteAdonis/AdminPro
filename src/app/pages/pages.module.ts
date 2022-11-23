@@ -10,24 +10,28 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { GraphOneComponent } from './graph-one/graphone.component';
 import { PagesComponent } from './pages.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ProgressComponent,    
     GraphOneComponent,
-    PagesComponent,    
+    PagesComponent,
+    AccountSettingsComponent,    
   ],
   exports: [
     DashboardComponent,
     ProgressComponent,    
     GraphOneComponent,
     PagesComponent,    
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
-    SharedModule,
     RouterModule,
+    SharedModule,    
     FormsModule,
     ComponentsModule
   ]
